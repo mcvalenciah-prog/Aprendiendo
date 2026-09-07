@@ -1,0 +1,595 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Camila Valencia | Psicología, IA & Triage de Salud Mental</title>
+  <meta name="description" content="Perfil profesional de Camila en investigación de Psicología con Inteligencia Artificial, datos biométricos y acústicos para el triage de salud mental universitario.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Fondo interactivo de Redes Neuronales y Ondas Acústicas -->
+  <canvas id="neural-canvas"></canvas>
+
+  <div class="content-wrapper">
+    <!-- NAVEGACIÓN -->
+    <header class="header">
+      <div class="container">
+        <nav class="navbar">
+          <a href="#" class="brand-logo">
+            <div class="logo-icon">
+              <!-- Icono de Cerebro y Nodos -->
+              <svg viewBox="0 0 24 24">
+                <path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 4.44-2.04z"></path>
+                <path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-4.44-2.04z"></path>
+              </svg>
+            </div>
+            <div class="brand-text">
+              <h2>Camila Valencia</h2>
+              <span>Psicología Computacional & IA · UNAL</span>
+            </div>
+          </a>
+
+          <ul class="nav-links">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#investigacion">Investigación</a></li>
+            <li><a href="#simulador">Simulador Triage</a></li>
+            <li><a href="#sobre-mi">Sobre Mí</a></li>
+            <li><a href="#contacto" class="nav-btn">Contacto UNAL</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="inicio">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <div class="badge-tag">
+              <span class="pulse-dot"></span>
+              Investigación en Psicología & Inteligencia Artificial · UNAL
+            </div>
+            <h1 class="hero-title">
+              Triage Inteligente de <span class="text-gradient">Salud Mental</span> en Entornos Universitarios
+            </h1>
+            <p class="hero-subtitle">
+              Integración de <strong>biomarcadores acústicos de voz</strong> y <strong>señales biométricas fisiológicas</strong> para la detección temprana, objetiva y no invasiva de factores de riesgo psicológico en la comunidad universitaria.
+            </p>
+
+            <div class="hero-cta">
+              <a href="#simulador" class="btn btn-primary">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                </svg>
+                Probar Simulador de Triage
+              </a>
+              <a href="#investigacion" class="btn btn-secondary">
+                Explorar Pilares
+              </a>
+            </div>
+
+            <div class="institution-pill">
+              <div class="institution-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2">
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                  <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                </svg>
+              </div>
+              <div class="institution-info">
+                <p>Afiliación Académica</p>
+                <h4>Universidad Nacional de Colombia</h4>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Visual: Visualizador Tecnológico Cerebro + IA -->
+          <div class="hero-visual">
+            <div class="visual-card">
+              <div class="card-header-tech">
+                <div class="tech-indicator">
+                  <span></span>
+                  Procesamiento Multimodal Activo
+                </div>
+                <div class="tech-stats">IA-TRIAGE v2.4</div>
+              </div>
+
+              <div class="brain-graphic-container">
+                <svg class="brain-svg" viewBox="0 0 320 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <!-- Gradientes para el cerebro -->
+                  <defs>
+                    <linearGradient id="brainGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stop-color="#38bdf8" />
+                      <stop offset="50%" stop-color="#9333ea" />
+                      <stop offset="100%" stop-color="#ec4899" />
+                    </linearGradient>
+                    <filter id="glowEffect">
+                      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                      <feMerge>
+                        <feMergeNode in="coloredBlur"/>
+                        <feMergeNode in="SourceGraphic"/>
+                      </feMerge>
+                    </filter>
+                  </defs>
+
+                  <!-- Hemisferio Izquierdo (Patrones Neuronales y Redes) -->
+                  <path d="M160 30 C120 30 70 50 60 90 C50 130 80 170 110 185 C130 195 155 195 160 195" 
+                        stroke="url(#brainGrad)" stroke-width="3.5" stroke-dasharray="8 4" filter="url(#glowEffect)"/>
+                  
+                  <!-- Hemisferio Derecho (Circuitos de Ingeniería) -->
+                  <path d="M160 30 C200 30 250 50 260 90 C270 130 240 170 210 185 C190 195 165 195 160 195" 
+                        stroke="url(#brainGrad)" stroke-width="3.5" stroke-dasharray="8 4" filter="url(#glowEffect)"/>
+
+                  <!-- Tronco y Línea Divisoria -->
+                  <line x1="160" y1="30" x2="160" y2="195" stroke="#38bdf8" stroke-width="2" stroke-opacity="0.6"/>
+
+                  <!-- Conexiones Sinápticas Internas (Nodos) -->
+                  <g stroke="#38bdf8" stroke-width="1.2" opacity="0.7">
+                    <line x1="90" y1="80" x2="130" y2="70"/>
+                    <line x1="130" y1="70" x2="140" y2="120"/>
+                    <line x1="140" y1="120" x2="100" y2="140"/>
+                    <line x1="100" y1="140" x2="90" y2="80"/>
+
+                    <line x1="230" y1="80" x2="190" y2="70"/>
+                    <line x1="190" y1="70" x2="180" y2="120"/>
+                    <line x1="180" y1="120" x2="220" y2="140"/>
+                    <line x1="220" y1="140" x2="230" y2="80"/>
+                  </g>
+
+                  <!-- Nodos de Neuronas y Sensores -->
+                  <circle cx="90" cy="80" r="4.5" fill="#38bdf8" filter="url(#glowEffect)"/>
+                  <circle cx="130" cy="70" r="5" fill="#a855f7" filter="url(#glowEffect)"/>
+                  <circle cx="140" cy="120" r="4.5" fill="#38bdf8" filter="url(#glowEffect)"/>
+                  <circle cx="100" cy="140" r="5" fill="#c084fc" filter="url(#glowEffect)"/>
+
+                  <circle cx="230" cy="80" r="4.5" fill="#38bdf8" filter="url(#glowEffect)"/>
+                  <circle cx="190" cy="70" r="5" fill="#a855f7" filter="url(#glowEffect)"/>
+                  <circle cx="180" cy="120" r="4.5" fill="#38bdf8" filter="url(#glowEffect)"/>
+                  <circle cx="220" cy="140" r="5" fill="#c084fc" filter="url(#glowEffect)"/>
+
+                  <!-- Onda Acústica Inferior -->
+                  <path d="M80 160 Q110 135 140 160 T200 160 T240 160" stroke="#c084fc" stroke-width="2.5" fill="none" opacity="0.85"/>
+                </svg>
+              </div>
+
+              <!-- Simulación de datos en tiempo real -->
+              <div class="bio-stream">
+                <div class="bio-stream-title">
+                  <span>Espectro Acústico & HRV</span>
+                  <span>F0: 210 Hz · HRV: 68 ms</span>
+                </div>
+                <div class="signal-bars">
+                  <div class="signal-bar" style="animation-delay: 0.1s"></div>
+                  <div class="signal-bar" style="animation-delay: 0.3s"></div>
+                  <div class="signal-bar" style="animation-delay: 0.5s"></div>
+                  <div class="signal-bar" style="animation-delay: 0.2s"></div>
+                  <div class="signal-bar" style="animation-delay: 0.7s"></div>
+                  <div class="signal-bar" style="animation-delay: 0.4s"></div>
+                  <div class="signal-bar" style="animation-delay: 0.6s"></div>
+                  <div class="signal-bar" style="animation-delay: 0.8s"></div>
+                  <div class="signal-bar" style="animation-delay: 0.2s"></div>
+                  <div class="signal-bar" style="animation-delay: 0.5s"></div>
+                  <div class="signal-bar" style="animation-delay: 0.3s"></div>
+                  <div class="signal-bar" style="animation-delay: 0.9s"></div>
+                  <div class="signal-bar" style="animation-delay: 0.4s"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HIGHLIGHTS / ESTADÍSTICAS -->
+    <section class="stats-section">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-item">
+            <div class="stat-value">Multimodal</div>
+            <div class="stat-label">Acústica + Biometría + Psicométrica</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">No Invasivo</div>
+            <div class="stat-label">Tamizaje pasivo y amigable para el estudiante</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">Oportuno</div>
+            <div class="stat-label">Detección temprana antes de crisis académicas</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">UNAL</div>
+            <div class="stat-label">Enfoque contextualizado en campus universitario</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PILARES DE INVESTIGACIÓN -->
+    <section class="section-padding" id="investigacion">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Fundamentos Científicos</span>
+          <h2 class="section-title">Pilares de Investigación en Salud Mental con IA</h2>
+          <p class="section-desc">
+            Abordaje interdisciplinario combinando la psicología clínica, la neurociencia del estrés y la ingeniería de señales computacionales.
+          </p>
+        </div>
+
+        <div class="pillars-grid">
+          <!-- Pilar 1: Acústico -->
+          <div class="pillar-card">
+            <div class="pillar-icon-box">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path>
+                <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                <line x1="12" y1="19" x2="12" y2="22"></line>
+              </svg>
+            </div>
+            <h3 class="pillar-title">Biomarcadores Acústicos</h3>
+            <p class="pillar-desc">
+              Extracción y análisis computacional de la voz para detectar patrones vocales alterados por ansiedad o sintomatología depresiva.
+            </p>
+            <ul class="feature-list">
+              <li>
+                <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Frecuencia Fundamental (F0) y prosodia del habla
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Microvariaciones de tono: Jitter & Shimmer
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Duración de silencios y pausas respiratorias
+              </li>
+            </ul>
+          </div>
+
+          <!-- Pilar 2: Biométrico -->
+          <div class="pillar-card">
+            <div class="pillar-icon-box">
+              <svg viewBox="0 0 24 24">
+                <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+              </svg>
+            </div>
+            <h3 class="pillar-title">Señales Biométricas</h3>
+            <p class="pillar-desc">
+              Monitoreo fisiológico objetivo de la respuesta autonómica al estrés académico mediante sensores portátiles y biomarcadores corporales.
+            </p>
+            <ul class="feature-list">
+              <li>
+                <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Variabilidad del Ritmo Cardíaco (HRV / RMSSD)
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Respuesta Galvánica de la Piel (Conductancia / GSR)
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Balance del sistema nervioso simpático/parasimpático
+              </li>
+            </ul>
+          </div>
+
+          <!-- Pilar 3: Triage Inteligente -->
+          <div class="pillar-card">
+            <div class="pillar-icon-box">
+              <svg viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                <line x1="12" y1="17" x2="12.01" y2="17"></line>
+              </svg>
+            </div>
+            <h3 class="pillar-title">Triage y Canalización UNAL</h3>
+            <p class="pillar-desc">
+              Algoritmo de clasificación y estratificación de riesgo para optimizar la atención en Bienestar Universitario y servicios de salud.
+            </p>
+            <ul class="feature-list">
+              <li>
+                <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Estratificación en 3 niveles de prioridad clínica
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Disminución de tiempos de espera en atención
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Privacidad de datos y ética algorítmica
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SIMULADOR INTERACTIVO DE TRIAGE -->
+    <section class="section-padding simulator-section" id="simulador">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Demostración Funcional</span>
+          <h2 class="section-title">Simulador de Triage Multimodal Universitario</h2>
+          <p class="section-desc">
+            Prueba cómo interactúan las variables acústicas de voz, las señales fisiológicas y los indicadores conductuales en el cálculo del índice de riesgo.
+          </p>
+        </div>
+
+        <div class="simulator-box">
+          <div class="simulator-grid">
+            <!-- Columna de Entradas / Controles -->
+            <div class="simulator-inputs">
+              
+              <!-- 1. Muestra Acústica -->
+              <div class="sim-module-title">
+                <svg viewBox="0 0 24 24"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path></svg>
+                1. Análisis Acústico de Voz (Simulado)
+              </div>
+
+              <div class="acoustic-panel">
+                <div class="voice-tester">
+                  <button type="button" class="mic-button" id="btn-voice-test">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path>
+                      <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                      <line x1="12" y1="19" x2="12" y2="22"></line>
+                    </svg>
+                    Grabar / Analizar Muestra de Voz
+                  </button>
+                  <span style="font-size: 0.75rem; color: var(--text-dim);">Detección de prosodia</span>
+                </div>
+
+                <div class="audio-spectrogram">
+                  <div class="spectro-bar"></div>
+                  <div class="spectro-bar"></div>
+                  <div class="spectro-bar"></div>
+                  <div class="spectro-bar"></div>
+                  <div class="spectro-bar"></div>
+                  <div class="spectro-bar"></div>
+                  <div class="spectro-bar"></div>
+                  <div class="spectro-bar"></div>
+                  <div class="spectro-bar"></div>
+                  <div class="spectro-bar"></div>
+                  <div class="spectro-bar"></div>
+                  <div class="spectro-bar"></div>
+                  <div class="spectro-bar"></div>
+                  <div class="spectro-bar"></div>
+                  <div class="spectro-bar"></div>
+                  <div class="spectro-bar"></div>
+                </div>
+
+                <div id="voice-metric-text" style="font-size: 0.75rem; color: var(--blue-bright); margin-top: 10px; font-family: monospace;">
+                  Presiona el botón para procesar una muestra vocal.
+                </div>
+              </div>
+
+              <!-- 2. Biometría Fisiológica -->
+              <div class="sim-module-title">
+                <svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+                2. Parámetros Fisiológicos (Biometría)
+              </div>
+
+              <!-- Slider HRV -->
+              <div class="control-group">
+                <div class="control-label-row">
+                  <span>Variabilidad Cardíaca (HRV / RMSSD):</span>
+                  <span class="val" id="val-hrv">55 ms</span>
+                </div>
+                <input type="range" id="slider-hrv" min="20" max="110" value="55">
+                <div style="display: flex; justify-content: space-between; font-size: 0.7rem; color: var(--text-dim); margin-top: 4px;">
+                  <span>Estrés fisiológico alto (20ms)</span>
+                  <span>Equilibrio autonómico (110ms)</span>
+                </div>
+              </div>
+
+              <!-- Slider BPM -->
+              <div class="control-group">
+                <div class="control-label-row">
+                  <span>Frecuencia Cardíaca en Reposo:</span>
+                  <span class="val" id="val-bpm">78 BPM</span>
+                </div>
+                <input type="range" id="slider-bpm" min="55" max="130" value="78">
+              </div>
+
+              <!-- Slider Estrés Subjetivo -->
+              <div class="control-group">
+                <div class="control-label-row">
+                  <span>Nivel de Carga Académica Percibida:</span>
+                  <span class="val" id="val-stress">6/10</span>
+                </div>
+                <input type="range" id="slider-stress" min="1" max="10" value="6">
+              </div>
+
+              <!-- 3. Síntomas Reportados -->
+              <div class="sim-module-title">
+                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+                3. Factores Conductuales en Campus (Selecciona los presentes)
+              </div>
+
+              <div class="symptom-tags">
+                <button type="button" class="symptom-btn">Dificultad de concentración</button>
+                <button type="button" class="symptom-btn selected">Alteración del sueño / Insomnio</button>
+                <button type="button" class="symptom-btn">Ansiedad ante evaluaciones</button>
+                <button type="button" class="symptom-btn">Desmotivación o anhedonia</button>
+                <button type="button" class="symptom-btn">Aislamiento social</button>
+              </div>
+
+              <button type="button" class="btn btn-primary" id="btn-calculate-triage" style="width: 100%; padding: 15px;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path>
+                  <path d="M22 12A10 10 0 0 0 12 2v10z"></path>
+                </svg>
+                Ejecutar Algoritmo de Triage Multimodal
+              </button>
+            </div>
+
+            <!-- Columna de Resultados de Triage -->
+            <div class="triage-output-panel">
+              <div>
+                <div style="font-size: 0.8rem; text-transform: uppercase; color: var(--text-dim); letter-spacing: 0.08em; text-align: center;">
+                  Resultado de Estratificación Clínica
+                </div>
+
+                <div class="triage-risk-meter">
+                  <div class="risk-score-display" id="risk-score-display" style="color: var(--blue-bright);">
+                    52
+                  </div>
+                  <div id="risk-level-badge" class="risk-level-tag risk-level-med">
+                    Nivel Moderado (Soporte)
+                  </div>
+                  <div style="font-size: 0.78rem; color: var(--text-muted);">
+                    Índice Compuesto de Vulnerabilidad Psicológica (0-100)
+                  </div>
+                </div>
+
+                <!-- Desglose Multimodal -->
+                <div class="multimodal-bars">
+                  <div class="channel-row">
+                    <span>Voz y Prosodia (Acústico):</span>
+                    <div class="channel-bar-wrap">
+                      <div class="channel-bar-fill fill-acoustic" id="bar-acoustic" style="width: 48%;"></div>
+                    </div>
+                  </div>
+                  <div class="channel-row">
+                    <span>Fisiológico (HRV & BPM):</span>
+                    <div class="channel-bar-wrap">
+                      <div class="channel-bar-fill fill-biometric" id="bar-biometric" style="width: 58%;"></div>
+                    </div>
+                  </div>
+                  <div class="channel-row">
+                    <span>Factores Académicos / Estrés:</span>
+                    <div class="channel-bar-wrap">
+                      <div class="channel-bar-fill fill-survey" id="bar-survey" style="width: 50%;"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Recomendación de Bienestar Universitario -->
+              <div class="triage-recommendation" id="triage-recommendation">
+                <h5>Ruta de Acompañamiento: Intervención Psicoeducativa</h5>
+                <p>
+                  Se detectan alteraciones moderadas en la prosodia vocal y reducción de la reserva autonómica (HRV). Recomendación: Canalización a talleres de gestión de ansiedad académica y técnicas de biofeedback con Bienestar Universitario UNAL.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE MÍ / PERFIL PROFESIONAL -->
+    <section class="section-padding" id="sobre-mi">
+      <div class="container">
+        <div class="about-grid">
+          <div class="profile-card">
+            <div class="avatar-wrapper">
+              <div class="avatar-ring"></div>
+              <div class="avatar-inner">
+                <!-- Icono de perfil con cerebro y neuronas -->
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+              </div>
+            </div>
+            <h3 class="profile-name">Camila Valencia H.</h3>
+            <p class="profile-title">Investigadora en Psicología Computacional & IA</p>
+            <div class="profile-unal-badge">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+              </svg>
+              Universidad Nacional de Colombia
+            </div>
+          </div>
+
+          <div class="about-text">
+            <span class="section-badge">Trayectoria & Propósito</span>
+            <h3>Acercando la Inteligencia Artificial a la Empatía y la Salud Mental</h3>
+            <p>
+              Mi trabajo investigativo se enfoca en el desarrollo de herramientas de <strong>triage de salud mental</strong> dirigidas a entornos universitarios. Combino la rigurosidad científica de la <strong>psicología clínica</strong> con las capacidades de la <strong>inteligencia artificial y el procesamiento digital de señales</strong> (acústicas y biométricas).
+            </p>
+            <p>
+              La vida universitaria somete a los estudiantes a altos niveles de presión académica, alteraciones circadianas y aislamiento social. Mediante el análisis no invasivo de la voz y señales autonómicas como la variabilidad cardíaca, buscamos <strong>detectar tempranamente las señales de alerta</strong>, reduciendo el estigma y facilitando un canal oportuno hacia el apoyo psicológico universitario.
+            </p>
+
+            <div class="credentials-list">
+              <div class="cred-item">
+                <h5>Procesamiento de Voz</h5>
+                <p>Extracción de prosodia, jitter, shimmer y marcadores fonéticos.</p>
+              </div>
+              <div class="cred-item">
+                <h5>Biometría del Estrés</h5>
+                <p>Análisis de HRV, respuesta galvánica y balance autonómico.</p>
+              </div>
+              <div class="cred-item">
+                <h5>Ética y Privacidad</h5>
+                <p>Modelos explicables (XAI) con respeto total por la privacidad del estudiante.</p>
+              </div>
+              <div class="cred-item">
+                <h5>Impacto Comunitario</h5>
+                <p>Optimización del flujo de atención en Bienestar Universitario UNAL.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section class="contact-section" id="contacto">
+      <div class="container">
+        <div class="contact-card">
+          <h2 class="contact-title">Hablemos de Investigación y Proyectos</h2>
+          <p class="contact-desc">
+            ¿Interesado/a en colaborar en proyectos de psicología computacional, procesamiento de señales para la salud mental o iniciativas de bienestar universitario? Escríbeme con total confianza.
+          </p>
+
+          <div class="email-box-wrapper">
+            <span class="email-address">mcvalenciah@unal.edu.co</span>
+            <button type="button" class="btn-copy" id="btn-copy-email">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+              Copiar correo
+            </button>
+          </div>
+
+          <div>
+            <a href="mailto:mcvalenciah@unal.edu.co" class="btn-mailto">
+              O abrir tu cliente de correo electrónico &rarr;
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div>
+            &copy; 2026 <strong>Camila Valencia H.</strong> · Investigación en Psicología & IA
+          </div>
+          <div class="footer-unal">
+            Universidad Nacional de Colombia · Bogotá D.C.
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Notificación Toast -->
+  <div class="toast-notice" id="toast-notice">
+    ¡Correo copiado al portapapeles!
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
