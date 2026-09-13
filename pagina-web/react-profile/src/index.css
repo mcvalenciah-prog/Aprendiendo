@@ -1,0 +1,188 @@
+/* ==========================================================================
+   React Profile App — design system
+   Tokens ported verbatim from pagina-web/styles.css (read-only data source):
+   palette, gradients, radii, shadows, fonts and motion.
+   ========================================================================== */
+
+:root {
+  /* Palette */
+  --bg-primary: #070913;
+  --bg-secondary: #0d1226;
+  --bg-card: rgba(18, 24, 48, 0.7);
+  --bg-card-hover: rgba(28, 37, 72, 0.85);
+  --border-card: rgba(139, 92, 246, 0.25);
+  --border-glow: rgba(56, 189, 248, 0.4);
+
+  --blue-bright: #38bdf8;
+  --blue-primary: #2563eb;
+  --blue-dark: #1d4ed8;
+
+  --purple-bright: #c084fc;
+  --purple-primary: #9333ea;
+  --purple-dark: #6b21a8;
+
+  --accent-cyan: #06b6d4;
+  --accent-pink: #ec4899;
+
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --text-dim: #64748b;
+
+  /* Gradients */
+  --gradient-main: linear-gradient(135deg, #38bdf8 0%, #a855f7 50%, #ec4899 100%);
+  --gradient-blue-purple: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+  --gradient-card: linear-gradient(145deg, rgba(25, 33, 66, 0.6) 0%, rgba(15, 20, 42, 0.8) 100%);
+
+  /* Shadows */
+  --shadow-neon: 0 0 25px rgba(124, 58, 237, 0.35);
+  --shadow-blue: 0 0 25px rgba(56, 189, 248, 0.35);
+
+  /* Radii */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-full: 9999px;
+
+  /* Typography */
+  --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  /* Motion */
+  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: var(--font-sans);
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  line-height: 1.6;
+}
+
+body {
+  position: relative;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+.app-content {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 48px 24px 80px;
+}
+
+.section-title {
+  font-size: 2.3rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin-bottom: 16px;
+  background: var(--gradient-main);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ==========================================================================
+   CONTACT HEADER
+   ========================================================================== */
+.contact-header {
+  width: 100%;
+  max-width: 1200px;
+  margin: 32px auto 0;
+  padding: 32px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-lg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: var(--shadow-neon);
+}
+
+.contact-header__role {
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--blue-bright);
+  margin-bottom: 8px;
+}
+
+.contact-header__name {
+  font-size: 2.2rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  margin-bottom: 24px;
+  background: var(--gradient-main);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.contact-header__fields {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.contact-header__field {
+  padding: 14px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius-md);
+}
+
+.contact-header__field dt {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--purple-bright);
+  margin-bottom: 4px;
+}
+
+.contact-header__field dd {
+  font-size: 0.95rem;
+  color: var(--text-main);
+}
+
+.contact-header__field a {
+  color: var(--blue-bright);
+  text-decoration: none;
+  transition: var(--transition-smooth);
+}
+
+.contact-header__field a:hover {
+  color: var(--text-main);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-header {
+    margin-top: 16px;
+    padding: 24px;
+  }
+
+  .contact-header__name {
+    font-size: 1.7rem;
+  }
+
+  .contact-header__fields {
+    grid-template-columns: 1fr;
+  }
+}
