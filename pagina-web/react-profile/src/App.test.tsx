@@ -2,9 +2,13 @@ import { describe, expect, it } from 'vitest'
 import { fireEvent, render, screen } from '@testing-library/react'
 import App from './App'
 
-// S2 renders the three content tabs; 'Simulador Triage' lands with S3 and is
-// deliberately not asserted here (it belongs to the S3 test suite).
-const CONTENT_TABS = ['Perfil profesional', 'Áreas de interés', 'Áreas de investigación']
+// profile-tabs: exactly four tabs, in this order, with Perfil profesional default.
+const TABS = [
+  'Perfil profesional',
+  'Áreas de interés',
+  'Áreas de investigación',
+  'Simulador Triage',
+]
 
 // profile-tabs S5: the seven data-less Hermes sections must never render.
 const OMITTED_SECTIONS = [
@@ -17,11 +21,11 @@ const OMITTED_SECTIONS = [
   'Enlaces',
 ]
 
-describe('App tab navigation (profile-tabs S1-S2)', () => {
-  it('renders the tab bar with the content tabs and Perfil profesional as default', () => {
+describe('App tab navigation (profile-tabs S1-S2, four tabs S3)', () => {
+  it('renders the tab bar with the four tabs and Perfil profesional as default', () => {
     render(<App />)
 
-    for (const label of CONTENT_TABS) {
+    for (const label of TABS) {
       expect(screen.getByRole('button', { name: label })).toBeInTheDocument()
     }
     expect(
@@ -42,11 +46,21 @@ describe('App tab navigation (profile-tabs S1-S2)', () => {
       screen.queryByRole('heading', { level: 2, name: 'Perfil profesional' }),
     ).not.toBeInTheDocument()
     expect(window.location.href).toBe(urlBefore)
+
+    fireEvent.click(screen.getByRole('button', { name: 'Simulador Triage' }))
+
+    expect(
+      screen.getByRole('heading', { level: 2, name: 'Simulador Triage' }),
+    ).toBeInTheDocument()
+    expect(
+      screen.queryByRole('heading', { level: 2, name: 'Áreas de investigación' }),
+    ).not.toBeInTheDocument()
+    expect(window.location.href).toBe(urlBefore)
   })
 })
 
 describe('App omitted sections (profile-tabs S5)', () => {
-  it.each(CONTENT_TABS)('never renders the seven data-less sections on %s', (tabLabel) => {
+  it.each(TABS)('never renders the seven data-less sections on %s', (tabLabel) => {
     render(<App />)
 
     fireEvent.click(screen.getByRole('button', { name: tabLabel }))
