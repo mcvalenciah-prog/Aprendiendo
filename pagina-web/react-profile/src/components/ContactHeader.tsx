@@ -1,4 +1,6 @@
 import type { Profile } from '../types'
+import BrainMonogram from './BrainMonogram'
+import camilaPerfil from '../assets/camila-perfil.webp'
 
 interface ContactHeaderProps {
   profile: Profile
@@ -10,8 +12,20 @@ interface ContactHeaderProps {
 function ContactHeader({ profile }: ContactHeaderProps) {
   return (
     <header className="contact-header">
-      <p className="contact-header__role">{profile.role}</p>
-      <h1 className="contact-header__name">{profile.name}</h1>
+      <div className="contact-header__top">
+        <BrainMonogram size={44} className="contact-header__mark" />
+        <div className="contact-header__identity">
+          <p className="contact-header__role">{profile.role}</p>
+          <h1 className="contact-header__name">{profile.name}</h1>
+        </div>
+        <img
+          src={camilaPerfil}
+          alt={profile.name}
+          className="contact-header__avatar"
+          width={112}
+          height={112}
+        />
+      </div>
       <dl className="contact-header__fields">
         <div className="contact-header__field">
           <dt>Dependencia</dt>

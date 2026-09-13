@@ -39,4 +39,21 @@ describe('ContactHeader', () => {
     expect(screen.getByText(/^Manizales/)).toBeInTheDocument()
     expect(screen.queryByText(/Bogotá/i)).not.toBeInTheDocument()
   })
+
+  it('renders the profile avatar with the person name as alt text', () => {
+    render(<ContactHeader profile={profile} />)
+
+    const avatar = screen.getByRole('img', { name: profile.name })
+    expect(avatar).toHaveAttribute('src', expect.stringMatching(/camila-perfil/) as unknown as string)
+    expect(avatar).toHaveAttribute('width', '112')
+    expect(avatar).toHaveAttribute('height', '112')
+  })
+
+  it('renders the brain monogram brand mark', () => {
+    render(<ContactHeader profile={profile} />)
+
+    expect(
+      screen.getByRole('img', { name: /Monograma cerebro multimodal/ }),
+    ).toBeInTheDocument()
+  })
 })
