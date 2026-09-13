@@ -156,7 +156,7 @@ body {
   height: 112px;
   border-radius: 50%;
   object-fit: cover;
-  object-position: center 52%;
+  object-position: center 50%;
   border: 2px solid var(--border-glow);
   box-shadow: 0 0 22px rgba(56, 189, 248, 0.28);
   background: var(--bg-secondary);
