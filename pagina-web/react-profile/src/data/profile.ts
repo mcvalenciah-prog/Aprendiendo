@@ -3,7 +3,7 @@ import type { Profile } from '../types'
 // Real content from pagina-web/index.html (read-only data source):
 // about section (bio paragraphs) and credentials-list (4 credential cards).
 export const profile: Profile = {
-  name: 'Camila Valencia H.',
+  name: 'Camila Valencia',
   role: 'Estudiante de maestría',
   department: 'Grupo de Control y Procesamiento Digital de Señales',
   campus: 'Manizales (Universidad Nacional de Colombia)',
